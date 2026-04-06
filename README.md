@@ -205,26 +205,6 @@ brew services start mongodb-community   # Mac
 ```bash
 streamlit run dashboard/app.py
 ```
-
----
-
-## 📊 Pipeline Overview
-
-| Step | What happens | Time |
-|---|---|---|
-| 1 | yt-dlp fetches metadata + comments (single call) | ~2-3 min |
-| 2 | Parse, clean, deduplicate comments | instant |
-| 3 | Language detection + Hinglish routing | ~5s |
-| 4 | Sentiment analysis (HuggingFace) | ~20s |
-| 5 | Emotion detection (go_emotions) | ~25s |
-| 6 | Toxicity + Sarcasm detection | ~30s |
-| 7 | Intent classification (rule-based) | instant |
-| 8 | Ensemble voting + Groq tiebreaker | ~15s |
-| 9 | BERTopic topic modeling | ~20s |
-| 10 | Audience segmentation + scoring | ~5s |
-| 11 | Groq AI creator report + content gaps | ~10s |
-| 12 | Save to MongoDB (cached for next time) | instant |
-
 ---
 
 ## 🌟 Key Technical Highlights
