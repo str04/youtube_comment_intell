@@ -1,6 +1,6 @@
 # 🎯 YT Intel — YouTube Comment Intelligence Platform
 
-> A final year Data Science capstone project that transforms raw YouTube comments into deep audience intelligence using a multi-layer NLP pipeline, ensemble ML, and Groq-powered AI insights.
+> An application that transforms raw YouTube comments into audience intelligence using a multi-layer NLP pipeline, ensemble ML, and Groq-powered AI insights.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.55-red?style=flat-square&logo=streamlit)
