@@ -251,17 +251,3 @@ python-dotenv
 ## 📄 License
 
 MIT License — free to use, modify, and distribute.
-
----
-
-## 🙏 Acknowledgements
-
-- [HuggingFace](https://huggingface.co) for open-source NLP models
-- [Groq](https://groq.com) for free LLaMA3 API access
-- [BERTopic](https://maartengr.github.io/BERTopic) for topic modeling
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp) for YouTube data extraction
-- [Streamlit](https://streamlit.io) for the dashboard framework
-
----
-
-*Built as a final year Data Science capstone project.*
