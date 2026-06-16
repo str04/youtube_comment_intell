@@ -8,24 +8,23 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ── Global CSS ────────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 
 :root {
-    --bg:        #0d0f14;
-    --surface:   #151820;
-    --surface2:  #1c2030;
-    --border:    #2a2f42;
-    --accent:    #6c63ff;
-    --accent2:   #ff6584;
-    --green:     #1fd99a;
-    --yellow:    #f5c542;
-    --red:       #ff5b5b;
-    --text:      #e8eaf0;
-    --muted:     #7a7f95;
-    --radius:    12px;
+    --bg: #0d0f14;
+    --surface: #151820;
+    --surface2: #1c2030;
+    --border: #2a2f42;
+    --accent: #6c63ff;
+    --accent2: #ff6584;
+    --green: #1fd99a;
+    --yellow: #f5c542;
+    --red: #ff5b5b;
+    --text: #e8eaf0;
+    --muted: #7a7f95;
+    --radius: 12px;
 }
 
 html, body, [class*="css"] {
@@ -34,22 +33,33 @@ html, body, [class*="css"] {
     color: var(--text) !important;
 }
 
-/* Hide default streamlit chrome */
-#MainMenu, footer, header { visibility: hidden; }
+#MainMenu, footer, header {
+    visibility: hidden;
+}
 
-/* Hide auto-generated page nav links at top of sidebar */
-[data-testid="stSidebarNav"] { display: none !important; }
-.block-container { padding: 1.5rem 2rem !important; max-width: 1400px; }
+[data-testid="stSidebarNav"] {
+    display: none !important;
+}
+
+.block-container {
+    padding: 1.5rem 2rem !important;
+    max-width: 1400px;
+}
 
 /* Sidebar */
 section[data-testid="stSidebar"] {
     background: var(--surface) !important;
     border-right: 1px solid var(--border) !important;
 }
-section[data-testid="stSidebar"] * { color: var(--text) !important; }
+
+section[data-testid="stSidebar"] * {
+    color: var(--text) !important;
+}
 
 /* Inputs */
-input, textarea, select,
+input,
+textarea,
+select,
 div[data-baseweb="input"] input,
 div[data-baseweb="textarea"] textarea {
     background: var(--surface2) !important;
@@ -68,9 +78,12 @@ div[data-baseweb="textarea"] textarea {
     font-family: 'Space Grotesk', sans-serif !important;
     font-weight: 600 !important;
     padding: 0.6rem 1.4rem !important;
-    transition: opacity .2s ease !important;
+    transition: opacity 0.2s ease !important;
 }
-.stButton > button:hover { opacity: .85 !important; }
+
+.stButton > button:hover {
+    opacity: 0.85 !important;
+}
 
 /* Metrics */
 [data-testid="stMetric"] {
@@ -79,8 +92,15 @@ div[data-baseweb="textarea"] textarea {
     border-radius: var(--radius) !important;
     padding: 1rem !important;
 }
-[data-testid="stMetricValue"] { color: var(--text) !important; font-weight: 700 !important; }
-[data-testid="stMetricLabel"] { color: var(--muted) !important; }
+
+[data-testid="stMetricValue"] {
+    color: var(--text) !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--muted) !important;
+}
 
 /* Tabs */
 button[data-baseweb="tab"] {
@@ -88,23 +108,29 @@ button[data-baseweb="tab"] {
     color: var(--muted) !important;
     background: transparent !important;
 }
+
 button[data-baseweb="tab"][aria-selected="true"] {
     color: var(--accent) !important;
     border-bottom: 2px solid var(--accent) !important;
 }
 
 /* Expanders */
-details, summary {
+details,
+summary {
     background: var(--surface) !important;
     border: 1px solid var(--border) !important;
     border-radius: var(--radius) !important;
 }
 
 /* Dataframe */
-[data-testid="stDataFrame"] { border-radius: var(--radius) !important; }
+[data-testid="stDataFrame"] {
+    border-radius: var(--radius) !important;
+}
 
 /* Divider */
-hr { border-color: var(--border) !important; }
+hr {
+    border-color: var(--border) !important;
+}
 
 /* Selectbox */
 div[data-baseweb="select"] * {
@@ -115,10 +141,14 @@ div[data-baseweb="select"] * {
 }
 
 /* Spinner */
-.stSpinner > div { border-top-color: var(--accent) !important; }
+.stSpinner > div {
+    border-top-color: var(--accent) !important;
+}
 
 /* Alerts */
-.stAlert { border-radius: var(--radius) !important; }
+.stAlert {
+    border-radius: var(--radius) !important;
+}
 
 /* Custom card */
 .yt-card {
@@ -128,9 +158,11 @@ div[data-baseweb="select"] * {
     padding: 1.2rem 1.4rem;
     margin-bottom: 1rem;
 }
+
 .yt-card-accent {
     border-left: 3px solid var(--accent);
 }
+
 .tag {
     display: inline-block;
     background: var(--surface2);
@@ -141,10 +173,30 @@ div[data-baseweb="select"] * {
     color: var(--muted);
     margin: 2px;
 }
-.tag-positive { border-color: #1fd99a44; color: var(--green); background: #1fd99a11; }
-.tag-negative { border-color: #ff5b5b44; color: var(--red);   background: #ff5b5b11; }
-.tag-neutral  { border-color: #7a7f9544; color: var(--muted); }
-.tag-sarcasm  { border-color: #f5c54244; color: var(--yellow); background: #f5c54211; }
+
+.tag-positive {
+    border-color: #1fd99a44;
+    color: var(--green);
+    background: #1fd99a11;
+}
+
+.tag-negative {
+    border-color: #ff5b5b44;
+    color: var(--red);
+    background: #ff5b5b11;
+}
+
+.tag-neutral {
+    border-color: #7a7f9544;
+    color: var(--muted);
+}
+
+.tag-sarcasm {
+    border-color: #f5c54244;
+    color: var(--yellow);
+    background: #f5c54211;
+}
+
 .segment-pill {
     display: inline-block;
     border-radius: 20px;
@@ -153,15 +205,18 @@ div[data-baseweb="select"] * {
     font-weight: 600;
     color: #fff;
 }
-.mono { font-family: 'JetBrains Mono', monospace; }
+
+.mono {
+    font-family: 'JetBrains Mono', monospace;
+}
 </style>
 """, unsafe_allow_html=True)
 
-# ── Sidebar nav ───────────────────────────────────────────────────────────────
+# Sidebar navigation
 with st.sidebar:
     st.markdown("""
     <div style='padding:1rem 0 1.5rem'>
-        <div style='font-size:1.5rem;font-weight:700;letter-spacing:-0.5px'>
+        <div style='font-size:1.5rem;font-weight:700'>
             🎯 YT Intel
         </div>
         <div style='font-size:0.78rem;color:var(--muted);margin-top:4px'>
@@ -170,15 +225,17 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
 
-    st.page_link("app.py",                       label="🏠  Home",          )
-    st.page_link("pages/1_analyze.py",            label="🔍  Analyze Video"  )
-    st.page_link("pages/2_about.py",              label="ℹ️  About"          )
+    st.page_link("app.py", label="🏠  Home")
+    st.page_link("pages/1_analyze.py", label="🔍  Analyze Video")
+    st.page_link("pages/2_about.py", label="ℹ️  About")
 
     st.divider()
-    st.markdown("<div style='color:var(--muted);font-size:0.75rem'>v1.0 · Built with ❤️</div>",
-                unsafe_allow_html=True)
+    st.markdown(
+        "<div style='color:var(--muted);font-size:0.75rem'>v1.0 · Built with Streamlit</div>",
+        unsafe_allow_html=True,
+    )
 
-# ── Home page ─────────────────────────────────────────────────────────────────
+# Home page
 st.markdown("""
 <div style='padding:3rem 0 2rem;text-align:center'>
     <div style='font-size:3.5rem;font-weight:800;letter-spacing:-2px;line-height:1.1;
@@ -188,20 +245,42 @@ st.markdown("""
     </div>
     <div style='color:var(--muted);font-size:1.1rem;margin-top:1rem;max-width:600px;margin-inline:auto'>
         Deep NLP analysis of YouTube comments — sentiment, emotions, topics,
-        audience segments, toxicity, sarcasm & AI-powered creator insights.
+        audience segments, toxicity, sarcasm, and AI-powered creator insights.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
 # Feature cards
 cols = st.columns(3)
+
 features = [
-    ("🧠", "NLP Pipeline",   "Sentiment · Emotion · Sarcasm · Toxicity · Intent · Topic Modeling"),
-    ("👥", "Audience Intel", "KMeans segmentation into Super Fans · Critics · Curious Minds · Casual"),
-    ("🤖", "AI Insights",    "Groq LLM generates creator reports & content gap recommendations"),
-    ("📊", "Rich Visuals",   "Gauges · Treemaps · Emotion radar · Word clouds · Timeline charts"),
-    ("🌐", "Hinglish Ready", "Multilingual BERT handles Roman Hindi / code-switched comments"),
+    (
+        "🧠",
+        "NLP Pipeline",
+        "Sentiment · Emotion · Sarcasm · Toxicity · Intent · Topic Modeling",
+    ),
+    (
+        "👥",
+        "Audience Intel",
+        "KMeans segmentation into Super Fans · Critics · Curious Minds · Casual",
+    ),
+    (
+        "🤖",
+        "AI Insights",
+        "Groq LLM generates creator reports and content gap recommendations",
+    ),
+    (
+        "📊",
+        "Rich Visuals",
+        "Gauges · Treemaps · Emotion radar · Word clouds · Timeline charts",
+    ),
+    (
+        "🌐",
+        "Hinglish Ready",
+        "Multilingual BERT handles Roman Hindi and code-switched comments",
+    ),
 ]
+
 for i, (icon, title, desc) in enumerate(features):
     with cols[i % 3]:
         st.markdown(f"""
@@ -213,10 +292,16 @@ for i, (icon, title, desc) in enumerate(features):
         """, unsafe_allow_html=True)
 
 st.divider()
+
 c1, c2 = st.columns([2, 1])
+
 with c1:
     st.markdown("### 🚀 Quick Start")
-    st.markdown("Paste any YouTube URL in the **Analyze Video** page and hit **Run Analysis**. Results are cached in MongoDB so repeat analyses are instant.")
+    st.markdown(
+        "Paste any YouTube URL in the **Analyze Video** page and hit **Run Analysis**. "
+        "Results are cached in MongoDB so repeat analyses are instant."
+    )
+
 with c2:
     if st.button("🔍  Analyze a Video", use_container_width=True):
         st.switch_page("pages/1_analyze.py")
