@@ -30,8 +30,9 @@ FIX 4: Casual Viewer under-scoring on Hinglish praise
   Root cause: 7 likes < 10 threshold AND positivity score just below 0.45.
   Fix: expanded HINGLISH_POSITIVE list + lower Super Fan likes threshold to 5.
 """
-
+# pyrefly: ignore [missing-import]
 import numpy as np
+# pyrefly: ignore [missing-import]
 import pandas as pd
 
 SEGMENT_LABELS = {

@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 from transformers import pipeline
 
 _sarcasm_model = None

@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 import streamlit as st
 
 st.set_page_config(page_title="About · YT Intel", page_icon="ℹ️", layout="wide")

@@ -1,4 +1,6 @@
+# pyrefly: ignore [missing-import]
 from bertopic import BERTopic
+# pyrefly: ignore [missing-import]
 from sklearn.feature_extraction.text import CountVectorizer
 
 _topic_model = None

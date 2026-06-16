@@ -20,10 +20,15 @@ COST: Groq free tier gives 6000 requests/day — more than enough.
 SPEED: Batching 20 comments per request keeps it fast.
 """
 
+# pyrefly: ignore [missing-import]
 import os
+# pyrefly: ignore [missing-import]
 import json
+# pyrefly: ignore [missing-import]
 import time
+# pyrefly: ignore [missing-import]
 from groq import Groq
+# pyrefly: ignore [missing-import]
 from dotenv import load_dotenv
 
 load_dotenv()

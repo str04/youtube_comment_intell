@@ -7,8 +7,11 @@ Run once to download all models:
 After that, all NLP modules will load from local disk — zero internet needed.
 """
 
-import os
+# pyrefly: ignore [missing-import]
+import os   
+# pyrefly: ignore [missing-import]
 from pathlib import Path
+# pyrefly: ignore [missing-import]
 from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
 
 # ── Where to store models ─────────────────────────────────────────────────────

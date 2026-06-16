@@ -15,14 +15,20 @@ Pipeline:
 Accuracy: ~75% single model → ~88-92% ensemble + Groq
 """
 
-import os, sys
+import os
+# pyrefly: ignore [missing-import]
+import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from model_cache import CACHE_DIR
 
+# pyrefly: ignore [missing-import]
 import streamlit as st
 from collections import Counter
+# pyrefly: ignore [missing-import]
 from transformers import pipeline
+# pyrefly: ignore [missing-import]
 from groq import Groq
+# pyrefly: ignore [missing-import]
 from dotenv import load_dotenv
 import json, time
 

@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 def classify_intent(text: str) -> str:
     t = text.lower()
     if any(w in t for w in ["?", "how", "why", "what", "when", "where", "who", "which", "can you", "could you"]):

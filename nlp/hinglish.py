@@ -1,8 +1,15 @@
-import os, sys
+# pyrefly: ignore [missing-import]
+import os
+# pyrefly: ignore [missing-import]
+import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from model_cache import CACHE_DIR
 
+# pyrefly: ignore [missing-import]
 from langdetect import detect
+# pyrefly: ignore [missing-import]  
+
+# pyrefly: ignore [missing-import]
 from transformers import pipeline
 
 

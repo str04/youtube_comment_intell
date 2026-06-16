@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 import streamlit as st
 
 st.set_page_config(
@@ -171,8 +172,7 @@ with st.sidebar:
 
     st.page_link("app.py",                       label="🏠  Home",          )
     st.page_link("pages/1_analyze.py",            label="🔍  Analyze Video"  )
-    st.page_link("pages/2_compare.py",            label="⚔️  Compare Videos" )
-    st.page_link("pages/3_about.py",              label="ℹ️  About"          )
+    st.page_link("pages/2_about.py",              label="ℹ️  About"          )
 
     st.divider()
     st.markdown("<div style='color:var(--muted);font-size:0.75rem'>v1.0 · Built with ❤️</div>",
@@ -200,7 +200,6 @@ features = [
     ("👥", "Audience Intel", "KMeans segmentation into Super Fans · Critics · Curious Minds · Casual"),
     ("🤖", "AI Insights",    "Groq LLM generates creator reports & content gap recommendations"),
     ("📊", "Rich Visuals",   "Gauges · Treemaps · Emotion radar · Word clouds · Timeline charts"),
-    ("⚔️", "Video Compare",  "Side-by-side NLP breakdown of any two YouTube videos"),
     ("🌐", "Hinglish Ready", "Multilingual BERT handles Roman Hindi / code-switched comments"),
 ]
 for i, (icon, title, desc) in enumerate(features):
@@ -221,5 +220,3 @@ with c1:
 with c2:
     if st.button("🔍  Analyze a Video", use_container_width=True):
         st.switch_page("pages/1_analyze.py")
-    if st.button("⚔️  Compare Two Videos", use_container_width=True):
-        st.switch_page("pages/2_compare.py")

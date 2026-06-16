@@ -1,0 +1,11 @@
+venv/
+models/
+.env
+__pycache__/
+*.pyc
+*.pyo
+ml/*.joblib
+evaluation_results.json
+.streamlit/
+.DS_Store
+Thumbs.db
