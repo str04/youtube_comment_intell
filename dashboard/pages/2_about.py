@@ -28,8 +28,7 @@ with st.sidebar:
                 unsafe_allow_html=True)
     st.page_link("app.py",             label="🏠  Home")
     st.page_link("pages/1_analyze.py", label="🔍  Analyze Video")
-    st.page_link("pages/2_compare.py", label="⚔️  Compare Videos")
-    st.page_link("pages/3_about.py",   label="ℹ️  About")
+    st.page_link("pages/2_about.py",   label="ℹ️  About")
 
 st.markdown("## ℹ️ About This Project")
 st.markdown("<div style='color:var(--muted);margin-bottom:2rem'>YouTube Comment Intelligence — a Data Science capstone project</div>",
@@ -60,8 +59,7 @@ st.code("""youtube-comment-intelligence/
     ├── app.py                    ← Home (this app)
     └── pages/
         ├── 1_analyze.py          ← Full analysis page
-        ├── 2_compare.py          ← Side-by-side comparison
-        └── 3_about.py            ← This page""", language="bash")
+        └── 2_about.py            ← This page""", language="bash")
 
 st.divider()
 
